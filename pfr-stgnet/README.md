@@ -29,7 +29,7 @@ The result is written to `runs/smoke/results.json`, with a checkpoint at `runs/s
 Each trajectory folder must contain `ca_ACT3.xvg`, `ca_ACT5.xvg`, `ca_ACT1.xvg`, `ca_ACT4.xvg`, and `ca_ACT2.xvg`. Each row is `time_ps, x1, y1, z1, ...`, as in the provided pilot folders. The code uses the actual XVG sampling interval: the supplied pilot exports are at 50 ps, whereas the manuscript specifies 10 ps. Export new XVGs at 10 ps for manuscript-matched experiments.
 
 ```powershell
-python -m pfr_stgnet.preprocess --folder '\250pN_seed12345' --output data/pilot/250pN_seed12345.npz --manifest data/pilot/manifest.csv --state seed12345 --configuration 0 --force-pn 250
+python -m pfr_stgnet.preprocess --folder '250pN_seed12345' --output data/pilot/250pN_seed12345.npz --manifest data/pilot/manifest.csv --state seed12345 --configuration 0 --force-pn 250
 python -m pfr_stgnet.preprocess --folder '250pN_seed23456' --output data/pilot/250pN_seed23456.npz --manifest data/pilot/manifest.csv --state seed23456 --configuration 0 --force-pn 250
 ```
 
