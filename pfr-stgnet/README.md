@@ -45,7 +45,7 @@ python -m pfr_stgnet.train --manifest data/full/manifest.csv --output runs/inter
 python -m pfr_stgnet.train --manifest data/full/manifest.csv --output runs/extrapolation_fold0 --fold 0 --mode extrapolate --seed 42
 ```
 
-Run folds `0..7` and five seeds per fold for the manuscript protocol. `--mode interpolate` removes 100 pN from training and validation; `--mode extrapolate` restricts them to at most 150 pN and evaluates 250 pN. AdamW defaults to learning rate `1e-3`, weight decay `1e-4`, effective batch size 16 via accumulation, and patience 20. `--stride 10` avoids training on every highly overlapping window; set `--stride 1` if exact every-frame windows are needed.
+Run folds `0.7` and five seeds per fold for the manuscript protocol. `--mode interpolate` removes 100 pN from training and validation; `--mode extrapolate` restricts them to at most 150 pN and evaluates 250 pN. AdamW defaults to learning rate `1e-3`, weight decay `1e-4`, effective batch size 16 via accumulation, and patience 20. `--stride 10` avoids training on every highly overlapping window; set `--stride 1` if exact every-frame windows are needed.
 
 ## Target and graph definitions
 
